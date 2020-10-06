@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.pluto.ai.lena</groupId>
+    <artifactId>lena</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.pluto.ai.search.core</groupId>
+  <artifactId>lena-search-ms</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+   <dependencies>
+  	<dependency> 
+  		<groupId>javax.ejb</groupId> 
+  		<artifactId>javax.ejb-api</artifactId> 
+  		<version>3.2.2</version> 
+  	</dependency>
+  	<dependency>
+  	    <groupId>javax.xml.bind</groupId>
+  	    <artifactId>jaxb-api</artifactId>
+  	    <version>2.3.1</version>
+  	</dependency>
+  	<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+  	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+		<version>2.3.3.RELEASE</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-tomcat</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+  	<dependency>
+	  	<groupId>javax.ws.rs</groupId>
+	    <artifactId>javax.ws.rs-api</artifactId>
+	    <version>2.1.1</version>
+    </dependency>    
+    <dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+			<version>7.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-customsearch</artifactId>
+			<version>v1-rev57-1.23.0</version>
+			<scope></scope>
+		</dependency>
+  </dependencies>
+  
+  <build>
+  <plugins>
+  <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>													
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-dependency-plugin</artifactId> -->
+<!-- 				<version>2.1</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>copy-dependencies</id> -->
+<!-- 						<phase>package</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>copy-dependencies</goal> -->
+<!-- 							<goal>build-classpath</goal> -->
+<!-- 						</goals> -->
+<!-- 						<configuration> -->
+<!-- 							<outputDirectory>${project.build.directory}/lib</outputDirectory> -->
+<!-- 							<overWriteReleases>false</overWriteReleases> -->
+<!-- 							<overWriteSnapshots>false</overWriteSnapshots> -->
+<!-- 							<overWriteIfNewer>true</overWriteIfNewer> -->
+<!-- 						</configuration> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+			</plugins>
+<!-- 	  <plugins> -->
+<!-- 	    <plugin> -->
+<!-- 	     <groupId>io.thorntail</groupId> -->
+<!--               <artifactId>thorntail-maven-plugin</artifactId> -->
+<!--               <version>3.2.1</version> -->
+<!-- 	      <executions> -->
+<!-- 	        <execution> -->
+<!-- 	          <goals><goal>package</goal></goals> -->
+<!-- 	        </execution> -->
+<!-- 	      </executions> -->
+<!-- 	    </plugin> -->
+<!-- 	  </plugins> -->
+  </build>
+</project>
