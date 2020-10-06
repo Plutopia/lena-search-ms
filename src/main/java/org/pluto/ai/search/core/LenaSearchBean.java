@@ -1,5 +1,9 @@
 package org.pluto.ai.search.core;
 
+/**
+ * Das ist eine Java Klasse
+ */
+
 import java.util.Iterator;
 import java.util.List;
 
