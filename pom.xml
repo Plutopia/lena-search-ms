@@ -9,6 +9,7 @@
   <artifactId>lena-search-ms</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <!-- Project POM File -->
    <dependencies>
   	<dependency> 
   		<groupId>javax.ejb</groupId> 
